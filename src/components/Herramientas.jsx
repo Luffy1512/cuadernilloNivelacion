@@ -2,8 +2,7 @@ import styled from "@emotion/styled"
 
 import visual from '../../src/img/visual.jpg'
 import sublime from '../../src/img/sublime.jpg'
-import notepad from '../../src/img/notepad.webp'
-
+import notepad from '../../src/img/notepad.jpg'
 import netbeans from '../../src/img/netbeans.jpg'
 import webstorm from '../../src/img/webstorm.jpg'
 

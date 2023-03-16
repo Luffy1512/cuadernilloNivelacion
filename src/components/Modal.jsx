@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
+import {mostrarImagen} from '../helpers'
 
-// const nombreImagen = require.context('../img', true)
 
 const Overley = styled.div`
     position: fixed;
@@ -24,6 +24,7 @@ const ModalImagen = styled.div`
 const Modal = ({setModal, imagen}) => {
 
     // console.log(imagen);
+    const img = mostrarImagen(imagen)
 
     const salirModal = () => {
         setModal(false)
@@ -34,7 +35,7 @@ const Modal = ({setModal, imagen}) => {
         onClick={salirModal}
     >
         <ModalImagen>
-            <img src={`../../public/assets/${imagen}.jpg`} alt="Imagen Modal" />
+            <img src={img} alt="Imagen Modal" />
         </ModalImagen>
     </Overley>
   )
