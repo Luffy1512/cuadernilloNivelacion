@@ -5,6 +5,7 @@ import phone from '../img/phone.svg'
 const PieDePagina = styled.footer`
     background-color: #202020;
     padding: 3rem 0;
+    margin-top: 5rem;
 `
 const FooterP = styled.p`
     color: #fff;
@@ -47,13 +48,13 @@ const Footer = () => {
             <div>
                 <DivContenido>
                     <img src={map} alt="imagen map" />
-                    <a href="https://www.google.com/maps/place/Escuela+de+Comercio+Ciudad+Alberdi/@-27.5939077,-65.6244395,17.81z/data=!4m15!1m8!3m7!1s0x9423e8f8a919f285:0x6a288b3278283280!2sC.+Saavedra,+Juan+Bautista+Alberdi,+Tucum%C3%A1n!3b1!8m2!3d-27.582544!4d-65.6248892!16s%2Fg%2F11dx991s0l!3m5!1s0x9423e8e346af2b69:0xb662ab9323c80d19!8m2!3d-27.5941968!4d-65.6231642!16s%2Fg%2F11f03szfdr">
-                        Calle J B Teran 200
+                    <a href="https://www.google.com/maps/place/Escuela+de+Comercio+Ciudad+Alberdi/@-27.5939077,-65.6244395,17.81z/data=!4m15!1m8!3m7!1s0x9423e8f8a919f285:0x6a288b3278283280!2sC.+Saavedra,+Juan+Bautista+Alberdi,+Tucum%C3%A1n!3b1!8m2!3d-27.582544!4d-65.6248892!16s%2Fg%2F11dx991s0l!3m5!1s0x9423e8e346af2b69:0xb662ab9323c80d19!8m2!3d-27.5941968!4d-65.6231642!16s%2Fg%2F11f03szfdr" target="_blank">
+                        Dirección: Av. B. Terán - 34
                     </a>
                 </DivContenido>
                 <DivContenido>
                     <img src={phone} alt="imagen telefono" />
-                    <a href="tel:3865627955">3865 - 627955</a>
+                    <a href="tel:3865746367">Celular: 3865 - 746367</a>
                 </DivContenido>
             </div>
             <FooterP>&copy; Todos los Derechos Reservados {new Date().getFullYear()}</FooterP>

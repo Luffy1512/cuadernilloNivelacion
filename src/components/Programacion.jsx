@@ -144,7 +144,7 @@ const Programacion = () => {
                     <ParrafoDiv>
                         Ejemplo:
                         <br/> - "Strings o Cadenas de Texto"
-                        nombre = “Luis”
+                        nombre = “Geronimo”
                         <br/> - "Integers o Enteros"
                         likes = 201
                         <br/> - "Floats o Flotantes"

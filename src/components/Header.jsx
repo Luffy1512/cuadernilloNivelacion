@@ -127,7 +127,7 @@ const Header = () => {
                             />
                         </Span>
                     </H2>
-                    <Parrafo>Aprende Diseño y Desarrollo Web</Parrafo>
+                    <Parrafo>Bienvenidos al Mundo del Desarrollo de Software</Parrafo>
                 </div>
                 <Imagen>
                     <img src={header} alt="Imagen header" />

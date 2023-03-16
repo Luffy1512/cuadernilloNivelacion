@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-
 import comilla from '../img/comilla.svg'
+import ciclodevida from '../img/ciclodevida.jpeg'
 
 const Section = styled.section`
     background-color: var(--azulOscuro);
@@ -71,6 +71,19 @@ const Video = styled.div`
     margin-top: 3rem;
     display: flex;
     justify-content: center;
+
+    iframe {
+        border: none;
+    }
+`
+
+const CicloDeVida = styled.div`
+    color: var(--blanco);
+
+    img {
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
 `
 
 const DesarrolloWeb = () => {
@@ -112,8 +125,16 @@ const DesarrolloWeb = () => {
             </Contenido>
 
             <Video>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/Gdprnr_NXmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="660" height="315" src="https://www.youtube.com/embed/Gdprnr_NXmE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </Video>
+
+            <CicloDeVida>
+                <h4>Ciclo de Vida del Software</h4>
+                <p>El Ciclo de Vida del Software: representa todas las etapas que debe pasar un programa desde su nacimiento o creación hasta su puesta en funcionamiento.</p>
+                <div>
+                    <img src={ciclodevida} alt="Ciclo de Vida del Software" />
+                </div>
+            </CicloDeVida>
         </div>
     </Section>
   )
