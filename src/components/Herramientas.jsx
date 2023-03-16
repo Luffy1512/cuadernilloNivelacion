@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import visual from '../../src/img/visual.jpg'
 import sublime from '../../src/img/sublime.jpg'
 import notepad from '../../src/img/notepad.jpg'
+
 import netbeans from '../../src/img/netbeans.jpg'
 import webstorm from '../../src/img/webstorm.jpg'
 
@@ -54,9 +55,46 @@ const Link = styled.a`
 
 const Herramientas = ({setImagen, setModal}) => {
 
-    const handleClick = (e) => {
+    const EDITORES = [
+        {
+            id: 1,
+            name: 'visual',
+            imgSrc: visual,
+            url: 'https://code.visualstudio.com/'
+        },
+        {
+            id: 2,
+            name: 'sublime',
+            imgSrc: sublime,
+            url: 'https://www.sublimetext.com/'
+        },
+        {
+            id: 3,
+            name: 'notepad',
+            imgSrc: notepad,
+            url: 'https://notepad-plus-plus.org/downloads/'
+        }
+    ]
+
+    const IDES = [
+        {
+            id: 1,
+            name: 'netbeans',
+            imgSrc: netbeans,
+            url: 'https://netbeans.apache.org/'
+        },
+        {
+            id: 2,
+            name: 'webstorm',
+            imgSrc: webstorm,
+            url: 'https://www.jetbrains.com/webstorm/download/download-thanks.html'
+        },
+    ]
+
+    const handleClick = (imgSrc) => {
         // console.log(e.target.alt);
-        setImagen(e.target.alt)
+        // setImagen(e.target.alt)
+        setImagen(imgSrc)
         setModal(true)
     }    
 
@@ -73,27 +111,16 @@ const Herramientas = ({setImagen, setModal}) => {
 
             <Tres_columnas>
                
-                <Contenedor>
-                    <img 
-                        onClick={handleClick}
-                        src={visual} 
-                        alt="visual" 
-                    />
-                    <Link href="https://code.visualstudio.com/">Link</Link>
-                </Contenedor>
-                <Contenedor>
-                    <img 
-                        onClick={handleClick}
-                        src={sublime} alt="sublime" />
-                    <Link href="https://www.sublimetext.com/">Link</Link>
-                </Contenedor>
-                <Contenedor>
-                    <img 
-                        onClick={handleClick}
-                        src={notepad} alt="notepad" 
-                    />
-                    <Link href="https://notepad-plus-plus.org/downloads/">Link</Link>
-                </Contenedor>
+               {EDITORES.map( editor => (
+                    <Contenedor key={editor.id}>
+                        <img 
+                            onClick={ () => handleClick(editor.imgSrc)}
+                            src={editor.imgSrc} 
+                            alt={editor.name} 
+                        />
+                        <Link href={editor.url}>Link</Link>
+                    </Contenedor>
+               ))}
             </Tres_columnas>
             
         </div>
@@ -104,20 +131,16 @@ const Herramientas = ({setImagen, setModal}) => {
             <p>Un ambiente de desarrollo integrado, a diferencia de un editor, es un programa más pesado que pide mucha más memoria RAM y un procesador más poderoso, además de que es un espacio para trabajar proyectos completos no solo en archivos. Contienen herramientas integradas, es decir, ahora ya no crearás carpetas por tu cuenta, pueden tener un compilador (para los lenguajes compilados), un emulador, control de versiones y terminales.</p>
 
             <Dos_columnas>
-                <Contenedor>
-                    <img 
-                        onClick={handleClick}
-                        src={netbeans} alt="netbeans" 
-                    />
-                    <Link href="https://netbeans.apache.org/">Link</Link>
-                </Contenedor>
-                <Contenedor>
-                    <img 
-                        onClick={handleClick}
-                        src={webstorm} alt="webstorm" 
-                    />
-                    <Link href="https://www.jetbrains.com/webstorm/download/download-thanks.html">Link</Link>
-                </Contenedor>
+                {IDES.map( ide => (
+                    <Contenedor key={ide.id}>
+                        <img 
+                            onClick={ () => handleClick(ide.imgSrc)}
+                            src={ide.imgSrc} 
+                            alt={ide.name}
+                        />
+                        <Link href={ide.url}>Link</Link>
+                    </Contenedor>
+               ))}
             </Dos_columnas>
             
         </div>
